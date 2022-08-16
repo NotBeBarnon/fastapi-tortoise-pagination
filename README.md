@@ -23,7 +23,8 @@
 1. install(安装)
     pip install fastapi-tortoise-pagination
 2. 使用
-    class ForumArticle(models.Model):
+ ```
+     class ForumArticle(models.Model):
         """论坛文章"""
         id = fields.IntField(pk=True)
         user = fields.ForeignKeyField("cp_model.User", on_delete=fields.CASCADE)
@@ -49,4 +50,5 @@
     async def list(self, params: Params = Depends()):
         query_set = ForumArticle.filter(is_delete=0)
         return await pagination(pydantic_model=ForumArticleSchema, query_set=query_set, params=params)
+```
 

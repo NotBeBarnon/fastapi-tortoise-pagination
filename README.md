@@ -4,9 +4,9 @@
 
 一、介绍
 该分页器主要分为三个块：Params、PagePydantic和pagination
-####1. Params
+1. Params
    前端传的参数，包括page(页数)、size(页面大小)和order_by(排序字段，选传)
-####2. PagePydantic
+2. PagePydantic
 ``` data: Sequence[T]   # 查询数据列表
     total: int          # 查询总数
     page: int
@@ -21,12 +21,12 @@
 
 二、快速开始：
 1. install(安装)
-    ```
-    pip install fastapi-tortoise-pagination
+   ```
+   pip install fastapi-tortoise-pagination
     ```
 2. 使用
- ```
-     class ForumArticle(models.Model):
+```
+    class ForumArticle(models.Model):
         """论坛文章"""
         id = fields.IntField(pk=True)
         user = fields.ForeignKeyField("cp_model.User", on_delete=fields.CASCADE)
@@ -52,5 +52,5 @@
     async def list(self, params: Params = Depends()):
         query_set = ForumArticle.filter(is_delete=0)
         return await pagination(pydantic_model=ForumArticleSchema, query_set=query_set, params=params)
-```
 
+```

@@ -3,4 +3,4 @@
 # @Author  : fzx
 # @Description :
 
-name = "fastapi-tortoise-pagination"
+name = "fastapi_tortoise_pagination"

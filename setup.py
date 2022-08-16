@@ -9,8 +9,8 @@ with open("README.md", "r", encoding="utf8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="fastapi-tortoise-pagination",
-    version="0.1.0",
+    name="fastapi_tortoise_pagination",
+    version="0.1.3",
     author="fengzhixiong",
     author_email="1775894560@qq.com",
     description="A paginator based on fastapi and tortoise-orm",

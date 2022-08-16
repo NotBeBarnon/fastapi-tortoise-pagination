@@ -2,7 +2,7 @@
 
 主要通过对QuerySet进行分页排序等进行操作，再对即将响应的数据进行序列化，相比较一些先序列化再分页的分页器，这个会更轻简快速。
 
-###一、介绍
+一、介绍
 该分页器主要分为三个块：Params、PagePydantic和pagination
 ####1. Params
    前端传的参数，包括page(页数)、size(页面大小)和order_by(排序字段，选传)
@@ -16,13 +16,13 @@
     previous: str       # 上页url
 ```
    响应模型，即返回给前端的数据模型
-####2. pagination
+2. pagination
 分页操作，将查询集QuerySet进行分页或者排序等操作，然后在根据用户自定义的Pydantic进行序列化，最后返回分页后的数据
 
-###二、快速开始：
-####1. install(安装)
+二、快速开始：
+1. install(安装)
     pip install fastapi-tortoise-pagination
-####2. 使用
+2. 使用
     class ForumArticle(models.Model):
         """论坛文章"""
         id = fields.IntField(pk=True)

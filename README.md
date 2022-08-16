@@ -21,7 +21,9 @@
 
 二、快速开始：
 1. install(安装)
-    ```pip install fastapi-tortoise-pagination```
+    ```
+    pip install fastapi-tortoise-pagination
+    ```
 2. 使用
  ```
      class ForumArticle(models.Model):

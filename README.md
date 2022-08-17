@@ -16,6 +16,7 @@
     previous: str       # 上页url
 ```
    响应模型，即返回给前端的数据模型
+   
 3. pagination
 分页操作，将查询集QuerySet进行分页或者排序等操作，然后在根据用户自定义的Pydantic进行序列化，最后返回分页后的数据
 

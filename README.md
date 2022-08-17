@@ -53,7 +53,7 @@
 
     @Action.get("/list",  response_model=PagePydantic[ForumArticleSchema],description="分页获取帖子列表")  #
     async def list(self, params: Params = Depends()):
-        query_set = ForumArticle.filter(is_delete=0)
+        query_set = ForumArticle.filter()
         return await pagination(pydantic_model=ForumArticleSchema, query_set=query_set, params=params)
 
 ```
